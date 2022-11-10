@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <link rel="stylesheet" href="https://use.typekit.net/wel8ibk.css">
+  <style lang="scss">
+    html,
+    body {
+      margin: 0;
+      background-color: #E5E5E5;
+      z-index: -99;
+    }
+
+    * {
+      font-family: "proxima-nova";
+    }
+
+    h2 {
+      font-size: 28px;
+      font-family: "proxima-nova";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 3.63636px;
+      color: #262626;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+<script async src="//www.youtube.com/iframe_api"></script>
+
 </html>

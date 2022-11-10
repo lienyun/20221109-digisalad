@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <SideBar></SideBar> -->
+  <FirstPart></FirstPart>
+  <About></About>
+  <Awards></Awards>
+  <!-- <Service></Service>
+  <Boss></Boss>
+  <Experience></Experience>
+  <Project></Project> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SideBar from './components/sideBar.vue'
+import FirstPart from './components/FirstPart.vue'
+import About from './components/About.vue'
+import Awards from './components/Awards.vue'
+import Service from './components/Service.vue'
+import Boss from './components/Boss.vue'
+import Experience from './components/Experience.vue'
+import Project from './components/Project.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SideBar,
+    FirstPart,About,
+    Awards, Service, Boss, Experience, Project
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
 </style>

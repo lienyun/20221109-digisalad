@@ -1,0 +1,109 @@
+<template>
+  <div class="container">
+
+    <h2></h2>
+
+
+    <div class="video-container">
+      <img src="video-thumbnail.png" alt="">
+    </div>
+    <div class="text-container">
+      <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt
+        urna
+        non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor.
+        Etiam
+        at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et,
+        venenatis
+        facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate
+        euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+    </div>
+
+
+    <button>VIEW MORE</button>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'About',
+}
+</script>
+
+<style lang="scss" scoped>
+* {
+  font-family: "proxima-nova";
+}
+
+.container {
+  margin-top: 125px;
+}
+
+h2 {
+  text-align: center;
+  font-family: "proxima-nova";
+
+
+  &::after {
+    content: 'ABOUT DIGISALAD';
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: #26C6D0;
+
+  }
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 72.7px;
+
+  & img {
+    width: 960px;
+    height: 544px;
+  }
+}
+
+.text-container {
+  margin: 0 auto;
+  width: 1007px;
+  margin-top: 30px;
+
+  & p {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+
+button {
+  font-family: "proxima-nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.22222px;
+  color: white;
+  border: none;
+  background: #26C6D0;
+  border-radius: 1px;
+  padding: 33px 24.53px 34px 24.53px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 52.03px;
+    height: 2px;
+    background-color: white;
+    margin-left: 15px;
+  }
+}
+</style>
