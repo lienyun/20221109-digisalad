@@ -1,20 +1,21 @@
 <template>
     <div class="container">
-
-        <div class="mainText">
-            <h2></h2>
-            <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis
-                tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper
-                turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim
-                nunc. </p>
-        </div>
-        <div>
-            <img src="awards.png" alt="">
-            <img src="awards.png" alt="">
-        </div>
-        <div>
-            <img src="awards.png" alt="">
-            <img src="awards.png" alt="">
+        <div class="content">
+            <div class="mainText">
+                <h2>&nbsp;&nbsp;AWARDS&nbsp;&nbsp;</h2>
+                <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis
+                    tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper
+                    turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim
+                    nunc. </p>
+            </div>
+            <div class="awards">
+                <img src="awards.png" alt="">
+                <img src="awards.png" alt="">
+            </div>
+            <div class="awards">
+                <img src="awards.png" alt="">
+                <img src="awards.png" alt="">
+            </div>
         </div>
     </div>
 </template>
@@ -30,27 +31,45 @@ export default {
 * {
     // border: 1px solid black;
 }
-
 .container {
+    position: relative;
+}
+.content {
+    position: absolute;
+    left: 98px;
     margin-top: 125px;
     display: flex;
     background-color: white;
     border-radius: 50px 0 50px 50px;
-    padding-top: 65px;
-    padding-left: 69px;
+    padding: 65px;
+    .mainText {
+        width: 416px;
+        padding-right: 37px;
+    }
+
+    .awards {
+        padding-right: 37px;
+        flex-basis: 0;
+
+        & :first-of-type {
+            padding-bottom: 19px;
+        }
+    }
 }
 
 .mainText {
-    h2 {
-        text-align: center;
-        font-family: "proxima-nova";
+    h2::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #EE6C8A;
+        display: inline-block;
+        margin-left: -10px;
+    }
 
-        &::after {
-            content: 'AWARDS';
-            text-decoration-style: wavy;
-            text-decoration-line: underline;
-            text-decoration-color: #26C6D0;
-        }
+    p {
+        padding-top: 31.7px;
     }
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
     <div class="video-container">
-        <iframe id="player" src="https://www.youtube.com/embed/8_4JRK4QkqU"></iframe>
+
+        <video autoplay loop muted type="video/mp4" src="DigiSalad Website Videov3_1080p.mp4"></video>
     </div>
     <div class="title">
         <nav>
@@ -18,8 +19,9 @@
                     AMAZING
                     <br>
                     DIGITAL EXPERIENCES
-
+                    <div class="dot"></div>
                 </h1>
+                
             </div>
 
         </div>
@@ -36,7 +38,9 @@
 export default {
     name: 'FirstPart',
     mounted() {
-        
+        document.addEventListener("DOMContentLoaded", function () {
+            const ytBackground = new VideoBackgrounds('[data-vbg]')
+        });
     },
     methods: {
 
@@ -58,10 +62,11 @@ export default {
     padding-top: 41px;
     height: 940px;
     padding-bottom: 75px;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 50px 50px;
 }
 
 h1 {
+    position: relative;
     font-style: normal;
     font-weight: 700;
     font-size: 38px;
@@ -69,19 +74,29 @@ h1 {
     letter-spacing: 9.16667px;
     margin: 0;
     color: white;
-    z-index: 99;
+    z-index: 1;
 
     &::after {
         content: '';
         display: block;
         background-color: #26C6D0;
-        width: 571px;
+        width: 580px;
         height: 8px;
         position: relative;
-        top: -23px;
+        top: -25px;
         left: -10px;
         z-index: -1;
+        margin: 0;
     }
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #EE6C8A;
+    display: inline-block;
+    margin-left: -10px;
 }
 
 nav {
@@ -156,13 +171,11 @@ nav {
     width: 100%;
     height: 940px;
     position: absolute;
-    z-index: 0;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 50px 50px;
     overflow: hidden;
 
-    & iframe {
-        width: 100%;
-        height: 940px;
+    & video {
+        z-index: -2;
     }
 }
 
@@ -176,6 +189,7 @@ nav {
     & img {
         width: 65px;
         height: 65px;
+        margin-bottom: 11px;
     }
 
     & h3 {

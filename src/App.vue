@@ -3,10 +3,10 @@
   <FirstPart></FirstPart>
   <About></About>
   <Awards></Awards>
-  <!-- <Service></Service>
+  <Service></Service>
   <Boss></Boss>
   <Experience></Experience>
-  <Project></Project> -->
+  <Project></Project>
 </template>
 
 <script>

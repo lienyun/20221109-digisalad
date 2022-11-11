@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 
-    <h2></h2>
+    <h2>&nbsp;&nbsp;ABOUT DIGISALAD&nbsp;&nbsp;</h2>
 
 
     <div class="video-container">
@@ -41,15 +41,14 @@ export default {
 
 h2 {
   text-align: center;
-  font-family: "proxima-nova";
-
-
   &::after {
-    content: 'ABOUT DIGISALAD';
-    text-decoration-style: wavy;
-    text-decoration-line: underline;
-    text-decoration-color: #26C6D0;
-
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #EE6C8A;
+    display: inline-block;
+    margin-left: -10px;
   }
 }
 
