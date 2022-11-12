@@ -270,10 +270,12 @@ export default {
   }
 
   & .btn1 {
-    // height: 210px;
     flex-grow: 2;
     position: relative;
     background-color: #26C6D0;
+    &:hover {
+      cursor: pointer;
+    }
 
     & .btn-bg {
       background: url(../assets/btn-1.png);
@@ -295,11 +297,12 @@ export default {
   }
 
   & .btn2 {
-    // height: 320px;
     flex-grow: 3;
-
     position: relative;
     background-color: #EE6C8A;
+    &:hover {
+      cursor: pointer;
+    }
 
     & .btn-bg {
       background: url(../assets/btn-2.png);
@@ -326,10 +329,12 @@ export default {
   }
 
   & .btn3 {
-    // height: 430px;
     flex-grow: 2;
     position: relative;
     background-color: #E6A94E;
+    &:hover {
+      cursor: pointer;
+    }
 
     & .btn-bg {
       background: url(../assets/btn-3.png);
@@ -350,11 +355,12 @@ export default {
   }
 
   & .btn4 {
-    // height: 282px;
     flex-grow: 1;
-
     position: relative;
     background-color: #26D0A8;
+    &:hover {
+      cursor: pointer;
+    }
 
     & .btn-bg {
       background: url(../assets/btn-4.png);
@@ -375,11 +381,13 @@ export default {
   }
 
   & .btn5 {
-    // height: 320px;
     flex-grow: 3;
 
     position: relative;
     background-color: #585880;
+    &:hover {
+      cursor: pointer;
+    }
 
     & .btn-bg {
       background: url(../assets/btn-5.png);
@@ -400,11 +408,12 @@ export default {
   }
 
   & .btn6 {
-    // height: 210px;
     flex-grow: 2;
-
     background-color: white;
     text-align: left;
+    &:hover {
+      cursor: pointer;
+    }
 
     & .wrap-content {
       position: absolute;

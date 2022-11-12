@@ -33,6 +33,7 @@ export default {
 }
 .container {
     position: relative;
+    z-index: 1;
 }
 .content {
     position: absolute;

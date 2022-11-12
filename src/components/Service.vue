@@ -127,7 +127,7 @@
     padding: 320px 152px 433px 152px;
     text-align: center;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 
 
     &>p {
@@ -223,6 +223,13 @@ h2 {
         letter-spacing: 2.22222px;
         margin-top: 30px;
 
+        &:hover {
+            cursor: pointer;
+            border: 2px solid transparent;
+            background-color: #585880;
+
+        }
+
     }
 }
 
@@ -271,6 +278,10 @@ h2 {
         height: 2px;
         background-color: white;
         margin-left: 15px;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: #FFBC58;
     }
 }
 
