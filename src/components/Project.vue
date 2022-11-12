@@ -41,7 +41,6 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../assets/project.png);
     background-blend-mode: normal, multiply;
     background-size: cover;
-    // background-color: black;
     position: absolute;
     width: 100%;
     height: 100%;

@@ -1,13 +1,13 @@
 <template>
-  <!-- <SideBar></SideBar> -->
-<Nav></Nav>
-  <FirstPart></FirstPart>
-  <About></About>
-  <Awards></Awards>
-  <Service></Service>
-  <Boss></Boss>
-  <Experience></Experience>
-  <Project></Project>
+  <SideBar v-if="menu" @noSidebar="getCancel"></SideBar>
+  <Nav @openMenu="getMenu" v-if="!menu"></Nav>
+  <FirstPart v-if="!menu"></FirstPart>
+  <About v-if="!menu"></About>
+  <Awards v-if="!menu"></Awards>
+  <Service v-if="!menu"></Service>
+  <Boss v-if="!menu"></Boss>
+  <Experience v-if="!menu"></Experience>
+  <Project v-if="!menu"></Project>
 </template>
 
 <script>
@@ -26,14 +26,28 @@ export default {
   name: 'App',
   components: {
     SideBar,
-    FirstPart,About,
-    Awards, Service, Boss, Experience, Project,Nav
+    FirstPart, About,
+    Awards, Service, Boss, Experience, Project, Nav
+  },
+  data(){
+    return{
+      menu: false
+    }
+  },
+  methods:{
+    getMenu(){
+      this.menu = true
+    },
+    getCancel(){
+      this.menu = false
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-html,body {
+html,
+body {
   position: relative;
 }
 </style>

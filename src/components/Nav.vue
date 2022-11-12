@@ -5,7 +5,7 @@
         <div class="right-side">
             <button>START YOUR PROJECT</button>
 
-            <img :class="{ black: isSticky }" src="menu-hamburger.svg" alt="">
+            <img :class="{ black: isSticky }" src="menu-hamburger.svg" alt="" @click="menu()">
 
         </div>
 
@@ -26,6 +26,9 @@ export default {
     methods: {
         handleScroll() {
             this.isSticky = window.scrollY > 200 ? true : false;
+        },
+        menu(){
+            this.$emit('openMenu')
         }
     }
 }
@@ -74,6 +77,9 @@ nav {
         display: flex;
         align-items: center;
         margin-right: 60px;
+        & img:hover {
+            cursor: pointer;
+        }
 
         & .black {
             // fill:#414042;
