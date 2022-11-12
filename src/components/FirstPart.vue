@@ -4,10 +4,7 @@
         <video autoplay loop muted type="video/mp4" src="DigiSalad Website Videov3_1080p.mp4"></video>
     </div>
     <div class="title">
-        <nav>
-            <button>START YOUR PROJECT</button>
-            <div class="hamburger"><img src="menu-hamburger.png" alt=""></div>
-        </nav>
+
         <div class="text">
             <div class="leftText">
                 <h5>DIGITAL AGENCY</h5>
@@ -34,7 +31,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'FirstPart',
     mounted() {
@@ -44,7 +40,7 @@ export default {
     },
     methods: {
 
-    }
+    },
 }
 </script>
 
@@ -60,9 +56,11 @@ export default {
     position: relative;
     background-color: rgba(black, 0.3);
     padding-top: 41px;
-    height: 940px;
-    padding-bottom: 75px;
+    height: 100vh;
     border-radius: 0 0 50px 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 h1 {
@@ -99,29 +97,7 @@ h1 {
     margin-left: -10px;
 }
 
-nav {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-top: 41px;
-    padding-right: 60px;
-    margin: 0;
 
-    & button {
-        padding: 12px 20px;
-        color: white;
-        background: linear-gradient(90deg, #4EE5EA 3.94%, #26D0A8 94.73%);
-        border-radius: 24px;
-        border: none;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        letter-spacing: 1.14286px;
-        text-align: center;
-        line-height: 17px;
-        margin-right: 44px;
-    }
-}
 
 
 .text {
@@ -133,7 +109,7 @@ nav {
     font-size: 16px;
     letter-spacing: 2.22222px;
     font-weight: 700;
-    padding-top: 179px;
+    padding-top: 100px;
     padding-left: 62.5px;
 
     & h5 {
@@ -169,7 +145,7 @@ nav {
 .video-container {
     background-color: black;
     width: 100%;
-    height: 940px;
+    height: 100vh;
     position: absolute;
     border-radius: 0 0 50px 50px;
     overflow: hidden;
@@ -184,7 +160,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 259px;
+
 
     & img {
         width: 65px;

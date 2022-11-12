@@ -1,0 +1,95 @@
+<template>
+    <nav :class="{ scroll: isSticky }">
+        <!-- <nav class="scroll"> -->
+        <img class="logo" :class="{ show: isSticky }" src="digisalad-blue.png" alt="">
+        <div class="right-side">
+            <button>START YOUR PROJECT</button>
+
+            <img :class="{ black: isSticky }" src="menu-hamburger.svg" alt="">
+
+        </div>
+
+    </nav>
+</template>
+
+<script>
+export default {
+    name: 'Nav',
+    data() {
+        return {
+            isSticky: false
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll)
+    },
+    methods: {
+        handleScroll() {
+            this.isSticky = window.scrollY > 200 ? true : false;
+        }
+    }
+}
+
+
+
+</script>
+
+<style lang="scss" scoped>
+nav {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    background-color: transparent;
+
+    & button {
+        padding: 12px 20px;
+        color: white;
+        background: linear-gradient(90deg, #4EE5EA 3.94%, #26D0A8 94.73%);
+        border-radius: 24px;
+        border: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1.14286px;
+        text-align: center;
+        line-height: 17px;
+        margin-right: 44px;
+    }
+
+    .logo {
+        margin-left: 80px;
+        opacity: 0;
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    & .right-side {
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+
+        & .black {
+            // fill:#414042;
+            // filter: #414042;
+            filter: invert(50%) sepia(0%) saturate(2%) hue-rotate(94deg) brightness(91%) contrast(85%);
+
+        }
+    }
+}
+
+.scroll {
+    background-color: rgba(white, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(black, 0.3);
+
+}
+</style>
