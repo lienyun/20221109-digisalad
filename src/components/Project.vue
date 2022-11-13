@@ -26,6 +26,11 @@
 </template>
 
 <style lang="scss" scoped>
+
+$colorBlue: #26C6D0;
+$colorPurple: #585880;
+$colorPink: #EE6C8A;
+$colorYellow: #FFBC58;
 .container {
     margin: 0;
     position: relative;
@@ -111,7 +116,7 @@ button {
     letter-spacing: 2.22222px;
     color: white;
     border: none;
-    background: #26C6D0;
+    background: $colorBlue;
     border-radius: 1px;
     padding: 60px 33px 61px 33px;
     margin: 0 auto;

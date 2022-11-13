@@ -1,8 +1,7 @@
 <template>
   <div class="container">
 
-    <h2>&nbsp;&nbsp;ABOUT DIGISALAD&nbsp;&nbsp;</h2>
-
+    <h2 id="about">&nbsp;&nbsp;ABOUT DIGISALAD&nbsp;&nbsp;</h2>
 
     <div class="video-container">
       <img src="video-thumbnail.png" alt="">
@@ -17,8 +16,6 @@
         facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate
         euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
     </div>
-
-
     <button>VIEW MORE</button>
   </div>
 </template>
@@ -41,6 +38,7 @@ export default {
 
 h2 {
   text-align: center;
+
   &::after {
     content: '';
     width: 10px;

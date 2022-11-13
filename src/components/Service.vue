@@ -1,7 +1,7 @@
 <template>
     <div class="container">
 
-        <h2>&nbsp;&nbsp;OUR INGRADIENTS&nbsp;&nbsp;</h2>
+        <h2 id="service">&nbsp;&nbsp;OUR INGRADIENTS&nbsp;&nbsp;</h2>
         <p>
             Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis
             tincidunt
@@ -119,8 +119,13 @@
 </template>
 
 <style lang="scss" scoped>
+$colorBlue: #26C6D0;
+$colorPurple: #585880;
+$colorPink: #EE6C8A;
+$colorYellow: #FFBC58;
+
 .container {
-    background-color: #26C6D0;
+    background-color: $colorBlue;
     border-radius: 50px;
     padding-top: 320px;
     margin-top: 286px;
@@ -150,7 +155,7 @@ h2 {
     text-decoration-style: wavy;
     text-decoration-line: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: #585880;
+    text-decoration-color: $colorPurple;
     text-underline-offset: 10px;
 
     &::after {
@@ -158,7 +163,7 @@ h2 {
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: #EE6C8A;
+        background-color: $colorPink;
         display: inline-block;
         margin-left: -10px;
     }
@@ -223,10 +228,14 @@ h2 {
         letter-spacing: 2.22222px;
         margin-top: 30px;
 
+
+
+
         &:hover {
             cursor: pointer;
             border: 2px solid transparent;
-            background-color: #585880;
+            background-color: white;
+            color: $colorBlue;
 
         }
 
@@ -262,7 +271,7 @@ h2 {
     letter-spacing: 2.22222px;
     color: white;
     border: none;
-    background: #585880;
+    background: $colorPurple;
     border-radius: 1px;
     padding: 33px 24.53px 34px 24.53px;
     margin: 0 auto;
@@ -279,9 +288,10 @@ h2 {
         background-color: white;
         margin-left: 15px;
     }
+
     &:hover {
         cursor: pointer;
-        background-color: #FFBC58;
+        background-color: $colorYellow;
     }
 }
 
@@ -295,12 +305,10 @@ a {
     text-decoration: none;
     color: white;
 
-
-
     &::after {
         content: '';
         display: block;
-        background-color: #FFBC58;
+        background-color: $colorYellow;
         width: 416px;
         height: 8px;
         margin: 0 auto;
@@ -309,4 +317,5 @@ a {
         z-index: -1;
     }
 }
+
 </style>

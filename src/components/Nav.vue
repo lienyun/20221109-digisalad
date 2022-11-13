@@ -25,7 +25,7 @@ export default {
     },
     methods: {
         handleScroll() {
-            this.isSticky = window.scrollY > 200 ? true : false;
+            this.isSticky = window.scrollY > 50 ? true : false;
         },
         menu(){
             this.$emit('openMenu')
@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 nav {
     position: absolute;
     z-index: 99;
@@ -48,6 +49,7 @@ nav {
     align-items: center;
     margin: 0;
     background-color: transparent;
+    top: 0;
 
     & button {
         padding: 12px 20px;
@@ -82,8 +84,6 @@ nav {
         }
 
         & .black {
-            // fill:#414042;
-            // filter: #414042;
             filter: invert(50%) sepia(0%) saturate(2%) hue-rotate(94deg) brightness(91%) contrast(85%);
 
         }
@@ -96,6 +96,23 @@ nav {
     top: 0;
     z-index: 10;
     box-shadow: 0 0 5px rgba(black, 0.3);
+}
 
+@keyframes showNav {
+    0% {
+        top: -300px;
+    }
+    100% {
+        top: 0;
+    }
+}
+.scroll {
+    animation-name: showNav;
+    animation-duration: 1s;
+}
+@media(max-width: 540px){
+nav button {
+    display: none;
+}
 }
 </style>

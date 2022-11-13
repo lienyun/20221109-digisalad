@@ -1,5 +1,6 @@
 <template>
-  <SideBar v-if="menu" @noSidebar="getCancel"></SideBar>
+  <SideBar @noSidebar="getCancel" v-if="menu"></SideBar>
+
   <Nav @openMenu="getMenu" v-if="!menu"></Nav>
   <FirstPart v-if="!menu"></FirstPart>
   <About v-if="!menu"></About>
@@ -27,20 +28,25 @@ export default {
   components: {
     SideBar,
     FirstPart, About,
-    Awards, Service, Boss, Experience, Project, Nav
+    Awards, Service, Boss, Experience, Project, Nav,
   },
-  data(){
-    return{
-      menu: false
+  data() {
+    return {
+      menu: false,
+
     }
   },
-  methods:{
-    getMenu(){
+  mounted() {
+
+  },
+  methods: {
+    getMenu() {
       this.menu = true
     },
-    getCancel(){
+    getCancel() {
       this.menu = false
-    }
+    },
+
   }
 }
 </script>
@@ -51,3 +57,4 @@ body {
   position: relative;
 }
 </style>
+

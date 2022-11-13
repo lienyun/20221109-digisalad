@@ -6,13 +6,10 @@
       <img src="digisalad.png" alt="">
       <div class="cancel" @click="cancel()"></div>
 
-
-
     </div>
     <div class="buttons">
       <div class="left-btn">
-
-        <button type="button" class="btn1">
+        <button type="button" class="btn1" @click="aboutHandler()">
           <div class="btn-bg"></div>
 
           <div class="wrap-content">
@@ -22,7 +19,6 @@
               <h3>ABOUT US</h3>
             </div>
           </div>
-
         </button>
 
         <button type="button" class="btn2">
@@ -54,7 +50,6 @@
         </button>
         <button type="button" class="btn4">
           <div class="btn-bg"></div>
-
           <div class="wrap-content">
             <img src="service-04.png" alt="">
             <h4>OUR STRATEGIES</h4>
@@ -65,15 +60,13 @@
       </div>
       <div class="right-btn">
 
-        <button type="button" class="btn5">
+        <button type="button" class="btn5" @click="serviceHandler()">
           <div class="btn-bg"></div>
-
           <div class="wrap-content">
             <img src="carrot.png" alt="">
             <h4>AREAS OF EXPERTISE</h4>
             <h3>SERVICES</h3>
           </div>
-
         </button>
 
         <button type="button" class="btn6">
@@ -82,12 +75,9 @@
             <h4>START YOUR JOURNEY WITH US</h4>
             <h3>CONTACT</h3>
           </div>
-
         </button>
-
       </div>
-
-
+    
     </div>
 
 
@@ -102,6 +92,19 @@ export default {
   methods: {
     cancel() {
       this.$emit('noSidebar')
+    },
+    aboutHandler() {
+      this.cancel()
+      setTimeout(() => {
+        window.location = '#about'
+      }, 0);
+    },
+    serviceHandler(){
+      console.log('service')
+      this.cancel()
+      setTimeout(() => {
+        window.location = '#service'
+      }, 0);
     }
   }
 
@@ -178,8 +181,6 @@ export default {
   .right-btn {
     display: flex;
     flex-direction: column;
-
-
   }
 
   & .left-btn,
@@ -194,7 +195,7 @@ export default {
 
 
 
-  & .center-btn{
+  & .center-btn {
     flex-grow: 2;
     height: 85vh;
 
@@ -215,7 +216,8 @@ export default {
       margin-left: 20px;
     }
   }
-  & .right-btn{
+
+  & .right-btn {
     & h4 {
       margin-top: 28px;
     }
@@ -273,6 +275,7 @@ export default {
     flex-grow: 2;
     position: relative;
     background-color: #26C6D0;
+
     &:hover {
       cursor: pointer;
     }
@@ -300,6 +303,7 @@ export default {
     flex-grow: 3;
     position: relative;
     background-color: #EE6C8A;
+
     &:hover {
       cursor: pointer;
     }
@@ -332,6 +336,7 @@ export default {
     flex-grow: 2;
     position: relative;
     background-color: #E6A94E;
+
     &:hover {
       cursor: pointer;
     }
@@ -358,6 +363,7 @@ export default {
     flex-grow: 1;
     position: relative;
     background-color: #26D0A8;
+
     &:hover {
       cursor: pointer;
     }
@@ -385,6 +391,7 @@ export default {
 
     position: relative;
     background-color: #585880;
+
     &:hover {
       cursor: pointer;
     }
@@ -411,6 +418,7 @@ export default {
     flex-grow: 2;
     background-color: white;
     text-align: left;
+
     &:hover {
       cursor: pointer;
     }
@@ -429,6 +437,18 @@ export default {
     & h3 {
       color: #26C6D0;
     }
+  }
+}
+
+.RWD-buttons {
+  display: none;
+}
+
+@media(max-width: 540px) {
+
+
+  .RWD-buttons {
+    display: flex;
   }
 }
 </style>

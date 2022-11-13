@@ -22,6 +22,10 @@
 </template>
 
 <style lang="scss" scoped>
+$colorBlue: #26C6D0;
+$colorPurple: #585880;
+$colorPink: #EE6C8A;
+$colorYellow: #FFBC58;
 .container {
     background-color: white;
     padding-top: 435px;
@@ -38,7 +42,7 @@ h2 {
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: #EE6C8A;
+        background-color: $colorPink;
         display: inline-block;
         margin-left: -10px;
     }

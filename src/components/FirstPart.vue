@@ -34,9 +34,6 @@
 export default {
     name: 'FirstPart',
     mounted() {
-        document.addEventListener("DOMContentLoaded", function () {
-            const ytBackground = new VideoBackgrounds('[data-vbg]')
-        });
     },
     methods: {
 
@@ -55,7 +52,7 @@ export default {
 .title {
     position: relative;
     background-color: rgba(black, 0.3);
-    padding-top: 41px;
+    width: 100%;
     height: 100vh;
     border-radius: 0 0 50px 50px;
     display: flex;
@@ -175,5 +172,14 @@ h1 {
         letter-spacing: 2px;
         color: white;
     }
+}
+
+@media(max-width: 540px) {
+.mainText {
+    padding: 0;
+}
+.leftText {
+    display: none;
+}
 }
 </style>
