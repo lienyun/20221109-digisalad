@@ -83,13 +83,15 @@ export default {
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 960px) {
     .content {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
 
         & .mainText {
             padding: 0;
+            margin: 0 auto;
         }
 
         & .awards {

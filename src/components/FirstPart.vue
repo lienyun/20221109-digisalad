@@ -210,12 +210,14 @@ h1 {
         display: block;
         margin: 0 auto;
         margin-top: 100px;
-        min-width: 400px;
+        // min-width: 400px;
 
         & h1 {
             &::after {
-                width: 360px;
-                height: 8px;
+                // width: 360px;
+                // height: 8px;
+                animation: showHighLight-rwd forwards;
+                animation-duration: .5s;
             }
         }
         & img {
@@ -225,6 +227,14 @@ h1 {
 
     .leftText {
         display: none;
+    }
+}
+@keyframes showHighLight-rwd{
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 360px;
     }
 }
 </style>

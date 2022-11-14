@@ -3,7 +3,7 @@
 
   <Nav @openMenu="getMenu" v-if="!menu"></Nav>
   <FirstPart v-if="!menu"></FirstPart>
-    <div class="line-white"></div>
+    <div t v-if="!menu" class="line-white"></div>
 
   <About v-if="!menu"></About>
   <Awards v-if="!menu"></Awards>
@@ -57,6 +57,7 @@ export default {
 html,
 body {
   position: relative;
+  // min-width: 560px;
 }
 
 

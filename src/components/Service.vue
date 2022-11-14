@@ -334,7 +334,7 @@ a:hover{
         animation-duration: .5s;
     }
 }
-@media(max-width: 768px) {
+@media(max-width: 960px) {
     .container{
         margin-top: 800px;
         padding-bottom: 400px;
