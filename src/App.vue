@@ -3,6 +3,8 @@
 
   <Nav @openMenu="getMenu" v-if="!menu"></Nav>
   <FirstPart v-if="!menu"></FirstPart>
+    <div class="line-white"></div>
+
   <About v-if="!menu"></About>
   <Awards v-if="!menu"></Awards>
   <Service v-if="!menu"></Service>
@@ -56,5 +58,28 @@ html,
 body {
   position: relative;
 }
+
+
+
+.line-white {
+    position: absolute;
+    top: 97vh;
+    left: 50%;
+    width: 1px;
+    // height: 44px;
+    background: white;
+    animation: showLine infinite;
+    animation-duration: 1s;
+}
+
+@keyframes showLine {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 120px;
+  }
+}
+
 </style>
 

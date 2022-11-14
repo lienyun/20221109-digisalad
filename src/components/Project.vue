@@ -166,33 +166,40 @@ button {
         margin-left: 26px;
     }
 }
+
 @keyframes left-arrow-bounce {
-    0%{
+    0% {
         left: 0;
     }
+
     50% {
         left: 10px
     }
+
     100% {
         left: 0;
     }
 }
 
 @keyframes right-arrow-bounce {
-    0%{
+    0% {
         right: 0;
     }
+
     50% {
         right: 10px
     }
+
     100% {
         right: 0;
     }
 }
+
 .left-arrow {
     animation: left-arrow-bounce infinite;
     animation-duration: .5s;
 }
+
 .right-arrow {
     animation: right-arrow-bounce infinite;
     animation-duration: .5s;
@@ -201,7 +208,7 @@ button {
 @media(max-width: 1200px) {
     .content {
         flex-direction: column;
-        
+
         & .left-side {
             margin-left: 20%;
         }
@@ -215,5 +222,11 @@ button {
     button {
         left: 40%;
     }
+
+    .left-arrow,
+    .right-arrow {
+        padding: 0 20px;
+    }
+
 }
 </style>

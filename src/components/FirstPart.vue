@@ -86,13 +86,25 @@ h1 {
         content: '';
         display: block;
         background-color: #26C6D0;
-        width: 580px;
+        // width: 580px;
         height: 8px;
         position: relative;
         top: -25px;
         left: -10px;
         z-index: -1;
         margin: 0;
+        animation: showHighLight forwards;
+        animation-duration: .5s;
+        // animation-delay: 2s;
+    }
+}
+
+@keyframes showHighLight{
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 580px;
     }
 }
 
@@ -189,7 +201,7 @@ h1 {
     display: none;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 960px) {
     .mainText {
         display: none;
     }
@@ -205,7 +217,9 @@ h1 {
                 width: 360px;
                 height: 8px;
             }
-
+        }
+        & img {
+            margin-bottom: 30px;
         }
     }
 

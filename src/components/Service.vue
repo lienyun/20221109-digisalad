@@ -310,12 +310,28 @@ a {
         content: '';
         display: block;
         background-color: $colorYellow;
-        width: 416px;
+        width: 0;
         height: 8px;
         margin: 0 auto;
         position: relative;
         top: -10px;
         z-index: -1;
+    }
+}
+
+@keyframes showHighlight {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 416px;
+    }
+}
+
+a:hover{
+    &::after {
+        animation: showHighlight forwards;
+        animation-duration: .5s;
     }
 }
 @media(max-width: 768px) {
