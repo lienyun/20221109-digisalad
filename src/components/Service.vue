@@ -129,7 +129,8 @@ $colorYellow: #FFBC58;
     border-radius: 50px;
     padding-top: 320px;
     margin-top: 286px;
-    padding: 320px 152px 433px 152px;
+    padding: 320px 10%;
+    padding-bottom: 500px;
     text-align: center;
     position: relative;
     z-index: 0;
@@ -317,5 +318,21 @@ a {
         z-index: -1;
     }
 }
+@media(max-width: 768px) {
+    .container{
+        margin-top: 800px;
+        padding-bottom: 400px;
 
+
+        & .services{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            & .service-col {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
 </style>

@@ -1,11 +1,13 @@
 <template>
     <div class="container">
+
+        <img class="left-arrow" src="arrow.png" alt="">
+        <img class="right-arrow" src="arrow.png" alt="">
+
         <div class="bg-img"></div>
         <div class="content">
             <div class="left-side">
-                <div class="img-matte">
-                    <img src="project.png" alt="">
-                </div>
+                <img src="project.png" alt="">
                 <button>VIEW PROJECT</button>
             </div>
             <div class="text">
@@ -26,17 +28,31 @@
 </template>
 
 <style lang="scss" scoped>
-
 $colorBlue: #26C6D0;
 $colorPurple: #585880;
 $colorPink: #EE6C8A;
 $colorYellow: #FFBC58;
+
 .container {
     margin: 0;
     position: relative;
     top: -50px;
     overflow: hidden;
     border-radius: 0 0 50px 50px;
+}
+
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    padding: 0 50px;
+}
+
+.right-arrow {
+    right: 0;
+    transform: rotate(180deg);
 }
 
 
@@ -55,18 +71,33 @@ $colorYellow: #FFBC58;
 .content {
     display: flex;
     justify-content: center;
-    padding: 200px;
+    padding: 10%;
 }
 
-.img-matte {
-    width: 540px;
-    height: 540px;
-    overflow: hidden;
-    border-radius: 20px;
-    object-fit: cover;
+.left-side {
+    position: relative;
+    flex: 1;
+    // & .img-matte {
+    //     width: 540px;
+    //     height: 540px;
+    //     overflow: hidden;
+    //     border-radius: 20px;
+    //     object-fit: cover;
+    // }
+    // & div {
+    //     position: relative;
+    // }
+
+    & img {
+        width: 40vw;
+        min-width: 400px;
+        border-radius: 20px;
+    }
+
 }
 
 .text {
+    flex: 1;
     color: white;
     padding-left: 62px;
     position: relative;
@@ -99,15 +130,13 @@ $colorYellow: #FFBC58;
 
 }
 
-.left-side {
-    position: relative;
 
-}
 
 button {
     position: absolute;
-    bottom: -68px;
-    right: -68px;
+    // right: -10%;
+    left: 60%;
+    bottom: -10%;
     font-family: "proxima-nova";
     font-style: normal;
     font-weight: 700;
@@ -118,11 +147,14 @@ button {
     border: none;
     background: $colorBlue;
     border-radius: 1px;
-    padding: 60px 33px 61px 33px;
-    margin: 0 auto;
-    margin-top: 30px;
+    // padding: 60px 33px 61px 33px;
+    width: 300px;
+    height: 140px;
+    // margin: 0 auto;
+    // margin-top: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
 
 
     &::after {
@@ -132,6 +164,56 @@ button {
         height: 2px;
         background-color: white;
         margin-left: 26px;
+    }
+}
+@keyframes left-arrow-bounce {
+    0%{
+        left: 0;
+    }
+    50% {
+        left: 10px
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes right-arrow-bounce {
+    0%{
+        right: 0;
+    }
+    50% {
+        right: 10px
+    }
+    100% {
+        right: 0;
+    }
+}
+.left-arrow {
+    animation: left-arrow-bounce infinite;
+    animation-duration: .5s;
+}
+.right-arrow {
+    animation: right-arrow-bounce infinite;
+    animation-duration: .5s;
+}
+
+@media(max-width: 1200px) {
+    .content {
+        flex-direction: column;
+        
+        & .left-side {
+            margin-left: 20%;
+        }
+
+        & .text {
+            margin-top: 100px;
+            padding: 0;
+        }
+    }
+
+    button {
+        left: 40%;
     }
 }
 </style>

@@ -31,29 +31,38 @@ export default {
 * {
     // border: 1px solid black;
 }
+
 .container {
     position: relative;
     z-index: 1;
 }
+
 .content {
     position: absolute;
-    left: 98px;
+    // left: 10%;
+    right: 0;
+    width: 80vw;
     margin-top: 125px;
     display: flex;
     background-color: white;
     border-radius: 50px 0 50px 50px;
     padding: 65px;
+
     .mainText {
         width: 416px;
         padding-right: 37px;
     }
 
     .awards {
-        padding-right: 37px;
+        // padding-right: 37px;
         flex-basis: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         & :first-of-type {
-            padding-bottom: 19px;
+            // padding-bottom: 19px;
         }
     }
 }
@@ -71,6 +80,28 @@ export default {
 
     p {
         padding-top: 31.7px;
+    }
+}
+
+@media(max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+
+        & .mainText {
+            padding: 0;
+        }
+
+        & .awards {
+            padding: 0;
+
+            & :first-of-type {
+                padding-bottom: 0;
+            }
+            & img {
+                padding-top: 20px;
+            }
+        }
     }
 }
 </style>

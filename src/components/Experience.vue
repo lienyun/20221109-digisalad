@@ -30,7 +30,7 @@ $colorYellow: #FFBC58;
     background-color: white;
     padding-top: 435px;
     position: relative;
-    z-index: -1;
+    z-index: 0;
     top: -50px;
 }
 
@@ -60,11 +60,27 @@ p {
 }
 
 .content {
-    padding: 50px 200px;
+    padding: 50px 10%;
     & img {
         margin: 0 auto;
         display: block;
         margin-top: 40px;
+        width: 90%;
     }
+}
+
+@media(max-width: 768px){
+    .container{
+        padding-top: 800px;
+    }
+    .content {
+
+    & img {
+        margin: 0 auto;
+        display: block;
+        margin-top: 40px;
+        width: 90%;
+    }
+}
 }
 </style>

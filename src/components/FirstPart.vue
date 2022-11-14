@@ -18,7 +18,18 @@
                     DIGITAL EXPERIENCES
                     <div class="dot"></div>
                 </h1>
-                
+            </div>
+            <div class="mainText-RWD">
+                <img src="digisalad.png" alt="">
+                <h1>WE CREATE
+                    <br>
+                    AMAZING
+                    <br>
+                    DIGITAL
+                    <br>
+                    EXPERIENCES
+                    <div class="dot"></div>
+                </h1>
             </div>
 
         </div>
@@ -174,12 +185,32 @@ h1 {
     }
 }
 
-@media(max-width: 540px) {
-.mainText {
-    padding: 0;
-}
-.leftText {
+.mainText-RWD {
     display: none;
 }
+
+@media(max-width: 768px) {
+    .mainText {
+        display: none;
+    }
+
+    .mainText-RWD {
+        display: block;
+        margin: 0 auto;
+        margin-top: 100px;
+        min-width: 400px;
+
+        & h1 {
+            &::after {
+                width: 360px;
+                height: 8px;
+            }
+
+        }
+    }
+
+    .leftText {
+        display: none;
+    }
 }
 </style>

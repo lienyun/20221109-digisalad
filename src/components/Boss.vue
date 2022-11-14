@@ -4,9 +4,7 @@
 
         <div class="content">
             <div class="boss">
-                <div>
-                    <img src="tony.png" alt="">
-                </div>
+                <img src="tony.png" alt="">
                 <h4>Tony Ng</h4>
                 <p>Founder & Creative Director</p>
             </div>
@@ -27,14 +25,11 @@
 </template>
 
 <style lang="scss" scoped>
-* {
-    // border: 1px solid black;
-}
 .container {
     position: relative;
-
-    z-index: 0;
+    z-index: 1;
 }
+
 .content {
     position: absolute;
     top: -318px;
@@ -47,12 +42,11 @@
 
 .boss {
     padding: 100px;
-    
-     & div {
-        border-radius: 50%;
-        overflow: hidden;
+
+    & img {
         width: 204px;
         height: 204px;
+        border-radius: 50%;
     }
 
 
@@ -79,7 +73,6 @@
         font-size: 16px;
         line-height: 16px;
         letter-spacing: 2px;
-        // word-wrap: break-word;
     }
 }
 
@@ -92,6 +85,7 @@
         display: block;
         margin: 0 auto;
     }
+
     & p {
         font-style: normal;
         font-weight: 400;
@@ -105,5 +99,30 @@
         }
     }
 
+}
+
+@media(max-width: 1200px) {
+    .content {
+        right: 10%;
+        flex-direction: column;
+        padding: 10%;
+
+        & .boss {
+            padding: 0;
+            text-align: center;
+
+            & div {
+                margin: 0;
+            }
+        }
+
+        & .quote {
+            padding: 0;
+            padding-top: 80px;
+            & p{
+                font-size: 16px;
+            }
+        }
+    }
 }
 </style>

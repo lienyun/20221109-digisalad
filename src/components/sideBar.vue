@@ -77,7 +77,7 @@
           </div>
         </button>
       </div>
-    
+
     </div>
 
 
@@ -99,7 +99,7 @@ export default {
         window.location = '#about'
       }, 0);
     },
-    serviceHandler(){
+    serviceHandler() {
       console.log('service')
       this.cancel()
       setTimeout(() => {
@@ -444,11 +444,29 @@ export default {
   display: none;
 }
 
-@media(max-width: 540px) {
-
-
-  .RWD-buttons {
-    display: flex;
+@media(max-width: 1200px) {
+  .container {
+    width: 100vw;
+    height: 100%;
   }
+  .bg-img {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+
+    & .left-btn,
+    .center-btn,
+    .right-btn {
+      width: 100%;
+      height: 500px;
+    }
+    & .btn1,.btn2,.btn3,.btn4,.btn5,.btn6 {
+      flex-grow: 1;
+    }
+  }
+
 }
 </style>

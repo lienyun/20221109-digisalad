@@ -57,14 +57,13 @@ h2 {
   margin-top: 72.7px;
 
   & img {
-    width: 960px;
-    height: 544px;
+    width: 80%;
   }
 }
 
 .text-container {
   margin: 0 auto;
-  width: 1007px;
+  width: 80%;
   margin-top: 30px;
 
   & p {
