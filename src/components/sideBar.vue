@@ -4,7 +4,9 @@
 
     <div class="nav">
       <img src="digisalad.png" alt="">
-      <div class="cancel" @click="cancel()"></div>
+      <div class="cancel-matte" @click="cancel()">
+        <div class="cancel"></div>
+      </div>
 
     </div>
     <div class="buttons">
@@ -142,8 +144,20 @@ export default {
     width: 140px;
   }
 
+  & .cancel-matte {
+    position: relative;
+    width: 45px;
+    height: 45px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   & .cancel {
-    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 15%;
     width: 30px;
     height: 3px;
     border-radius: 1.5px;
@@ -162,9 +176,10 @@ export default {
       transform: rotate(90deg);
     }
 
-    &:hover {
-      cursor: pointer;
-    }
+
+    // &:hover {
+    //   cursor: pointer;
+    // }
   }
 }
 
@@ -444,11 +459,38 @@ export default {
   display: none;
 }
 
+.btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover,.btn5:hover,.btn6:hover {
+  animation: shakeBtn infinite linear;
+  animation-duration: .5s ;
+}
+
+@keyframes shakeBtn {
+  0%{
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+
+  }
+  50% {
+    transform: rotate(0deg);
+
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+
+}
+
 @media(max-width: 1200px) {
   .container {
     width: 100vw;
     height: 100%;
   }
+
   .bg-img {
     width: 100vw;
     height: 100%;
@@ -463,7 +505,13 @@ export default {
       width: 100%;
       height: 500px;
     }
-    & .btn1,.btn2,.btn3,.btn4,.btn5,.btn6 {
+
+    & .btn1,
+    .btn2,
+    .btn3,
+    .btn4,
+    .btn5,
+    .btn6 {
       flex-grow: 1;
     }
   }

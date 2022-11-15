@@ -64,6 +64,9 @@ nav {
         text-align: center;
         line-height: 17px;
         margin-right: 44px;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .logo {
