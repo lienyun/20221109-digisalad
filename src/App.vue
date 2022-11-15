@@ -1,16 +1,16 @@
 <template>
-  <SideBar @noSidebar="getCancel" v-if="menu"></SideBar>
+  <SideBar @noSidebar="getCancel" v-show="menu"></SideBar>
 
-  <Nav @openMenu="getMenu" v-if="!menu"></Nav>
+  <Nav @openMenu="getMenu" v-show="!menu"></Nav>
   <FirstPart v-if="!menu"></FirstPart>
-    <div t v-if="!menu" class="line-white"></div>
+  <div v-show="!menu" class="line-white"></div>
 
-  <About v-if="!menu"></About>
-  <Awards v-if="!menu"></Awards>
-  <Service v-if="!menu"></Service>
-  <Boss v-if="!menu"></Boss>
-  <Experience v-if="!menu"></Experience>
-  <Project v-if="!menu"></Project>
+  <About v-show="!menu"></About>
+  <Awards v-show="!menu"></Awards>
+  <Service v-show="!menu"></Service>
+  <Boss v-show="!menu"></Boss>
+  <Experience v-show="!menu"></Experience>
+  <Project v-show="!menu"></Project>
 </template>
 
 <script>
@@ -56,27 +56,30 @@ export default {
 <style lang="scss" scoped>
 html,
 body {
-  position: relative;
+  // position: relative;
   // min-width: 560px;
 }
 
-
+::v-deep * {
+  outline: 1px solid black;
+}
 
 .line-white {
-    position: absolute;
-    top: 97vh;
-    left: 50%;
-    width: 1px;
-    // height: 44px;
-    background: white;
-    animation: showLine infinite;
-    animation-duration: 1s;
+  position: absolute;
+  top: 97vh;
+  left: 50%;
+  width: 1px;
+  // height: 44px;
+  background: white;
+  animation: showLine infinite;
+  animation-duration: 1s;
 }
 
 @keyframes showLine {
   0% {
     height: 0;
   }
+
   100% {
     height: 120px;
   }
