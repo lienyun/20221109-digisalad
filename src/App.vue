@@ -93,7 +93,7 @@ export default {
     opacity: 1;
   }
 
-  100% {
+  95% {
     opacity: 0;
   }
 }
@@ -106,7 +106,7 @@ export default {
     opacity: 1;
   }
 
-  100% {
+  95% {
     top: 70vh;
     opacity: 0;
   }

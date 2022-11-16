@@ -145,7 +145,6 @@ $colorYellow: #FFBC58;
         font-size: 32px;
         line-height: 39px;
         letter-spacing: 3.63636px;
-
     }
 
     & p {
@@ -155,7 +154,6 @@ $colorYellow: #FFBC58;
         line-height: 24px;
         letter-spacing: 1px;
     }
-
 }
 
 
@@ -190,7 +188,6 @@ $colorYellow: #FFBC58;
         background-color: white;
         margin-left: 26px;
         transition: .5s;
-
     }
 
     &:hover {
@@ -288,7 +285,7 @@ $colorYellow: #FFBC58;
         }
 
         & .text {
-            margin-top: 50px;
+            display: none;
         }
     }
 }
