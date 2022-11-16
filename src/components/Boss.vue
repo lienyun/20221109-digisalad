@@ -9,15 +9,20 @@
                 <p>Founder & Creative Director</p>
             </div>
             <div class="quote">
-                <img src="left-quote 1.png" alt="">
-                <p>
-                    A great digital work isn’t about designing beautiful pages purely. It is about context - how do we
-                    <span>deliver the right experience to the right person at the right time. </span>The most important
-                    thing is that
-                    your work can engage customers at anytime, anywhere and let users experience an entire amazing
-                    digital
-                    journey.
-                </p>
+                <div>
+                    <img src="left-quote 1.png" alt="">
+                    <p>
+                        A great digital work isn’t about designing beautiful pages purely. It is about context - how do
+                        we
+                        <span>deliver the right experience to the right person at the right time. </span>The most
+                        important
+                        thing is that
+                        your work can engage customers at anytime, anywhere and let users experience an entire amazing
+                        digital
+                        journey.
+                    </p>
+                </div>
+
             </div>
         </div>
 
@@ -38,10 +43,12 @@
     border-radius: 0 65px 65px 65px;
     background: url(../assets/boss-bg.png) no-repeat;
     background-size: cover;
+    align-items: center;
+    padding: 100px;
 }
 
 .boss {
-    padding: 100px;
+    // padding: 100px;
 
     & img {
         width: 204px;
@@ -77,9 +84,8 @@
 }
 
 .quote {
-    padding-top: 80px;
-    padding-right: 100px;
-    padding-left: 11px;
+    padding-left: 111px;
+
 
     & img {
         display: block;
@@ -122,7 +128,8 @@
             padding: 0;
             // padding-top: 80px;
             order: 1;
-            & p{
+
+            & p {
                 font-size: 16px;
                 line-height: 36px;
             }
