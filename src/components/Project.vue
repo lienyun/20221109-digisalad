@@ -7,6 +7,7 @@
                 <div class="content">
                     <div class="left-side">
                         <img src="project.png" alt="">
+                        <h3 class="rwd-title">{{ slide.title }}</h3>
                         <button class="main-btn">VIEW PROJECT</button>
                     </div>
                     <div class="text">
@@ -73,9 +74,10 @@ $colorPurple: #585880;
 $colorPink: #EE6C8A;
 $colorYellow: #FFBC58;
 
-*{
+* {
     font-family: "proxima-nova";
 }
+
 .container {
     margin: 0;
     position: relative;
@@ -122,6 +124,10 @@ $colorYellow: #FFBC58;
         width: 35vw;
         min-width: 300px;
         border-radius: 20px;
+    }
+
+    & .rwd-title {
+        display: none;
     }
 
 }
@@ -212,6 +218,10 @@ $colorYellow: #FFBC58;
         left: 45%;
 
     }
+
+    .rwd-title {
+        display: none;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -244,11 +254,25 @@ $colorYellow: #FFBC58;
         & .left-side {
             margin: 0 auto;
 
+            & .rwd-title {
+                display: block;
+                color: white;
+                position: relative;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 24px;
+                letter-spacing: 3.63636px;
+                margin: 0;
+                margin-top: 15px;
+            }
+
             & button {
                 position: relative;
                 top: 0;
                 left: 0;
-                margin-top: 30px;
+                margin: 0 auto;
+                margin-top: 15px;
                 height: 20px;
                 background-color: transparent;
                 z-index: 1;
