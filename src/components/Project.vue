@@ -102,6 +102,14 @@ $colorYellow: #FFBC58;
 
 }
 
+.carousel__next,
+.carousel__prev {
+    color: $colorBlue;
+    background-color: white;
+    border-radius: 50%;
+    width: 53px;
+    height: 53px;
+}
 
 .left-side {
     position: relative;
@@ -154,7 +162,7 @@ $colorYellow: #FFBC58;
 
 .main-btn {
     position: absolute;
-    left: 45%;
+    left: 55%;
     bottom: -10%;
     font-family: "proxima-nova";
     font-style: normal;
@@ -199,7 +207,12 @@ $colorYellow: #FFBC58;
     }
 }
 
+@media(max-width: 1440px) {
+    .main-btn {
+        left: 45%;
 
+    }
+}
 
 @media(max-width: 1200px) {
     .content {
