@@ -165,7 +165,6 @@ $colorGreen: #26D0A8;
   align-items: center;
 
   & img {
-    // height: 40px;
     width: 120px;
     height: 54px;
   }
@@ -229,8 +228,6 @@ $colorGreen: #26D0A8;
       margin-top: 9px;
     }
   }
-
-
 
   & .center-btn {
     flex-grow: 2;

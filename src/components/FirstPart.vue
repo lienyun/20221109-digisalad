@@ -52,6 +52,7 @@ $colorBlue: #26C6D0;
 $colorPurple: #585880;
 $colorPink: #EE6C8A;
 $colorYellow: #FFBC58;
+
 * {
     box-sizing: border-box;
     font-family: "proxima-nova";
