@@ -321,7 +321,8 @@ $colorGreen: #26D0A8;
     position: absolute;
     left: 10%;
     bottom: 20%;
-    & div{
+
+    & div {
       text-align: left;
     }
   }
@@ -422,6 +423,7 @@ $colorGreen: #26D0A8;
       left: 15%;
       bottom: 10%;
       text-align: left;
+
       & h4 {
         margin-top: 15px;
       }
@@ -454,8 +456,8 @@ $colorGreen: #26D0A8;
     background-color: white;
     text-align: left;
 
-    & .wrap-content{
-      & div{
+    & .wrap-content {
+      & div {
         margin: 0;
       }
     }
@@ -561,21 +563,46 @@ $colorGreen: #26D0A8;
       display: flex;
       left: 5%;
     }
-    & .btn3,.btn4{
-      & .wrap-content{
+
+    & .btn3,
+    .btn4 {
+      & .wrap-content {
         flex-direction: row;
         align-items: center;
         left: 5%;
         bottom: 20%;
-        & div{
+
+        & div {
           margin-left: 20px;
         }
+
         & h4 {
           margin: 0;
         }
       }
     }
   }
+}
 
+@media(max-width: 560px) {
+  .buttons {
+
+    & .left-btn,
+    .center-btn,
+    .right-btn {
+      width: 100%;
+      height: 350px;
+    }
+
+    & .center-btn{
+      & .btn4{
+        min-height: auto;
+      }
+    }
+
+    & .wrap-content {
+      left: 10%;
+    }
+  }
 }
 </style>
