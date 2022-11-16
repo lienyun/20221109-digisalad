@@ -110,6 +110,8 @@
         & .boss {
             padding: 0;
             text-align: center;
+            order: 2;
+            padding-top: 80px;
 
             & div {
                 margin: 0;
@@ -118,7 +120,8 @@
 
         & .quote {
             padding: 0;
-            padding-top: 80px;
+            // padding-top: 80px;
+            order: 1;
             & p{
                 font-size: 16px;
                 line-height: 36px;

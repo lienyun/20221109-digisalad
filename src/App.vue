@@ -4,7 +4,7 @@
   <Nav @openMenu="getMenu" v-show="!menu"></Nav>
   <FirstPart v-if="!menu"></FirstPart>
   <div v-show="!menu" class="line-white"></div>
-
+  <div  v-show="!menu" class="swipe"></div>
   <About v-show="!menu"></About>
   <Awards v-show="!menu"></Awards>
   <Service v-show="!menu"></Service>
@@ -54,15 +54,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-html,
-body {
-  // position: relative;
-  // min-width: 560px;
-}
-
-::v-deep * {
-  outline: 1px solid black;
-}
+// ::v-deep * {
+//   outline: 1px solid black;
+// }
 
 .line-white {
   position: absolute;
@@ -72,7 +66,21 @@ body {
   // height: 44px;
   background: white;
   animation: showLine infinite;
-  animation-duration: 1s;
+  animation-duration: 2s;
+}
+
+.swipe {
+  position: absolute;
+  background: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  // top: 70vh;
+  left: 50%;
+  transform: translate(-5px);
+  animation: showLineRWD infinite;
+  animation-duration: 2s;
+  display: none;
 }
 
 @keyframes showLine {
@@ -80,10 +88,37 @@ body {
     height: 0;
   }
 
-  100% {
+  70% {
     height: 120px;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
+@keyframes showLineRWD {
+  0% {
+    top: 75vh;
+  }
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 70vh;
+    opacity: 0;
+  }
+}
+
+@media(max-width:468px){
+  .line-white{
+    display: none;
+  }
+  .swipe{
+    display: block;
+  }
+}
 </style>
 

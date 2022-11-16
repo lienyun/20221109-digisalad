@@ -116,6 +116,7 @@ h2 {
 .service-col {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .service {
@@ -166,7 +167,7 @@ h2 {
         line-height: 17px;
         letter-spacing: 2.22222px;
         margin-top: 30px;
-
+        transition: .5s;
 
 
 
@@ -175,6 +176,7 @@ h2 {
             border: 2px solid transparent;
             background-color: white;
             color: $colorBlue;
+            transition: .5s;
 
         }
 
@@ -217,6 +219,7 @@ h2 {
     margin-top: 30px;
     display: flex;
     align-items: center;
+    transition: .5s;
 
 
     &::after {
@@ -231,6 +234,7 @@ h2 {
     &:hover {
         cursor: pointer;
         background-color: $colorYellow;
+        transition: .5s;
     }
 }
 

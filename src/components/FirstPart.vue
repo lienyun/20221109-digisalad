@@ -47,6 +47,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+$colorBlue: #26C6D0;
+$colorPurple: #585880;
+$colorPink: #EE6C8A;
+$colorYellow: #FFBC58;
 * {
     box-sizing: border-box;
     font-family: "proxima-nova";
@@ -77,7 +82,7 @@ h1 {
     &::after {
         content: '';
         display: block;
-        background-color: #26C6D0;
+        background-color: $colorBlue;
         height: 8px;
         position: relative;
         top: -25px;
@@ -103,7 +108,7 @@ h1 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #EE6C8A;
+    background-color: $colorPink;
     display: inline-block;
     margin-left: -10px;
 }
@@ -190,15 +195,23 @@ h1 {
 .mainText-RWD {
     display: none;
 }
-
-@media(max-width:960px) {
+@media(max-width:960px){
+    .mainText {
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    .leftText {
+        display: none;
+    }
+}
+@media(max-width:768px) {
     .mainText {
         display: none;
     }
 
     .mainText-RWD {
         display: block;
-        margin: 0 30px;
+        margin: 0 auto;
         margin-top: 100px;
 
         & h1 {
@@ -214,6 +227,7 @@ h1 {
 
         & img {
             margin-bottom: 30px;
+            width: 150px;
         }
     }
 

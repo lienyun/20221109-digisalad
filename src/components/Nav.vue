@@ -116,13 +116,13 @@ nav {
     animation-duration: 1s;
 }
 
-@media(max-width: 540px) {
+@media(max-width:1200px) {
     nav button {
         display: none;
     }
     nav {
         height: 64px;
-        padding: 10px 30px;
+        padding: 10px 25px 10px 30px;
         & .logo {
             height: 40px;
         }

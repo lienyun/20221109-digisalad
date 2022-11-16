@@ -23,6 +23,8 @@
           </div>
         </button>
 
+
+
         <button type="button" class="btn2">
           <div class="btn-bg"></div>
 
@@ -45,8 +47,11 @@
 
           <div class="wrap-content">
             <img src="service-03.png" alt="">
-            <h4>BE COOL WITH US</h4>
-            <h3>CAREERS</h3>
+            <div>
+              <h4>BE COOL WITH US</h4>
+              <h3>CAREERS</h3>
+            </div>
+
           </div>
 
         </button>
@@ -54,8 +59,11 @@
           <div class="btn-bg"></div>
           <div class="wrap-content">
             <img src="service-04.png" alt="">
-            <h4>OUR STRATEGIES</h4>
-            <h3>INSIGHTS</h3>
+            <div>
+              <h4>OUR STRATEGIES</h4>
+              <h3>INSIGHTS</h3>
+            </div>
+
           </div>
 
         </button>
@@ -66,16 +74,22 @@
           <div class="btn-bg"></div>
           <div class="wrap-content">
             <img src="carrot.png" alt="">
-            <h4>AREAS OF EXPERTISE</h4>
-            <h3>SERVICES</h3>
+            <div>
+              <h4>AREAS OF EXPERTISE</h4>
+              <h3>SERVICES</h3>
+            </div>
+
           </div>
         </button>
 
         <button type="button" class="btn6">
 
           <div class="wrap-content">
-            <h4>START YOUR JOURNEY WITH US</h4>
-            <h3>CONTACT</h3>
+            <div>
+              <h4>START YOUR JOURNEY WITH US</h4>
+              <h3>CONTACT</h3>
+            </div>
+
           </div>
         </button>
       </div>
@@ -104,6 +118,12 @@ export default {
       this.cancel()
       window.location = '#service'
     }
+  },
+  computed: {
+    getClassName(i) {
+      // var id = i+1
+      return `btn+${i}`
+    }
   }
 
 }
@@ -111,6 +131,12 @@ export default {
 
 
 <style lang="scss" scoped>
+$colorBlue: #26C6D0;
+$colorPurple: #585880;
+$colorPink: #EE6C8A;
+$colorYellow: #FFBC58;
+$colorGreen: #26D0A8;
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -118,7 +144,7 @@ export default {
 }
 
 .bg-img {
-  background: linear-gradient(180deg, rgba(#585880, 0.9) 3.61%, rgba(#26C6D0, 0.9) 95.7%), url(../assets/sidebar-bg.png) no-repeat;
+  background: linear-gradient(180deg, rgba($colorPurple, 0.9) 3.61%, rgba($colorBlue, 0.9) 95.7%), url(../assets/sidebar-bg.png) no-repeat;
   mix-blend-mode: normal;
   background-size: cover;
   position: absolute;
@@ -210,6 +236,11 @@ export default {
     flex-grow: 2;
     height: 85vh;
 
+    & .wrap-content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
 
     & h4 {
       margin-top: 28px;
@@ -220,11 +251,13 @@ export default {
     }
   }
 
-  & .left-btn {
+  & .left-btn,
+  .right-btn {
+    & .wrap-content {
+      & div {
+        margin-left: 20px;
 
-    & h3,
-    h4 {
-      margin-left: 20px;
+      }
     }
   }
 
@@ -263,7 +296,7 @@ export default {
       &::after {
         content: '';
         display: inline-block;
-        background-color: #EE6C8A;
+        background-color: $colorPink;
         width: 10px;
         height: 10px;
         border-radius: 50px;
@@ -282,10 +315,21 @@ export default {
     }
   }
 
+  & .wrap-content {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    & div{
+      text-align: left;
+    }
+  }
+
   & .btn1 {
     flex-grow: 2;
     position: relative;
-    background-color: #26C6D0;
+    background-color: $colorBlue;
 
     &:hover {
       cursor: pointer;
@@ -300,20 +344,12 @@ export default {
       top: 0;
       left: 0;
     }
-
-    & .wrap-content {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: 10%;
-      bottom: 20%;
-    }
   }
 
   & .btn2 {
     flex-grow: 3;
     position: relative;
-    background-color: #EE6C8A;
+    background-color: $colorPink;
 
     &:hover {
       cursor: pointer;
@@ -330,15 +366,8 @@ export default {
     }
 
     & .wrap-content {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      text-align: left;
-      left: 10%;
-      bottom: 20%;
-
       & h3::after {
-        background-color: #26C6D0;
+        background-color: $colorBlue;
       }
     }
   }
@@ -363,15 +392,15 @@ export default {
     }
 
     & .wrap-content {
-      position: absolute;
-      left: 10%;
-      bottom: 20%;
+      left: 15%;
+      bottom: 10%;
       text-align: left;
     }
   }
 
   & .btn4 {
     flex-grow: 1;
+    min-height: 200px;
     position: relative;
     background-color: #26D0A8;
 
@@ -390,10 +419,12 @@ export default {
     }
 
     & .wrap-content {
-      position: absolute;
-      left: 10%;
-      bottom: 20%;
+      left: 15%;
+      bottom: 10%;
       text-align: left;
+      & h4 {
+        margin-top: 15px;
+      }
     }
   }
 
@@ -401,7 +432,7 @@ export default {
     flex-grow: 3;
 
     position: relative;
-    background-color: #585880;
+    background-color: $colorPurple;
 
     &:hover {
       cursor: pointer;
@@ -416,13 +447,6 @@ export default {
       top: 0;
       left: 0;
     }
-
-    & .wrap-content {
-      position: absolute;
-      left: 10%;
-      bottom: 20%;
-      text-align: left;
-    }
   }
 
   & .btn6 {
@@ -430,23 +454,23 @@ export default {
     background-color: white;
     text-align: left;
 
+    & .wrap-content{
+      & div{
+        margin: 0;
+      }
+    }
+
     &:hover {
       cursor: pointer;
     }
 
-    & .wrap-content {
-      position: absolute;
-      left: 10%;
-      bottom: 30%;
-
-    }
-
     & h4 {
       color: #262626;
+      margin: 0;
     }
 
     & h3 {
-      color: #26C6D0;
+      color: $colorBlue;
     }
   }
 }
@@ -504,12 +528,12 @@ export default {
   }
 
   .container {
-    width: 100vw;
+    width: 100%;
     height: 100%;
   }
 
   .bg-img {
-    width: 100vw;
+    width: 100%;
     height: 100%;
   }
 
@@ -531,6 +555,25 @@ export default {
     .btn5,
     .btn6 {
       flex-grow: 1;
+    }
+
+    & .wrap-content {
+      display: flex;
+      left: 5%;
+    }
+    & .btn3,.btn4{
+      & .wrap-content{
+        flex-direction: row;
+        align-items: center;
+        left: 5%;
+        bottom: 20%;
+        & div{
+          margin-left: 20px;
+        }
+        & h4 {
+          margin: 0;
+        }
+      }
     }
   }
 

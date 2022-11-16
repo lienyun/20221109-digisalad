@@ -28,6 +28,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+$colorBlue: #26C6D0;
+$colorPurple: #585880;
+$colorPink: #EE6C8A;
+$colorYellow: #FFBC58;
 * {
   font-family: "proxima-nova";
 }
@@ -44,7 +49,7 @@ h2 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #EE6C8A;
+    background-color: $colorPink;
     display: inline-block;
     margin-left: -10px;
   }
@@ -84,13 +89,14 @@ button {
   letter-spacing: 2.22222px;
   color: white;
   border: none;
-  background: #26C6D0;
+  background: $colorBlue;
   border-radius: 1px;
   padding: 33px 24.53px 34px 24.53px;
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
   align-items: center;
+  transition: .5s;
 
 
   &::after {
@@ -106,9 +112,13 @@ button {
   &:hover {
     cursor: pointer;
     background-color: white;
-    color: #26C6D0;
+    color: $colorBlue;
+    transition: .5s;
+
     &::after {
-      background-color: #26C6D0;
+      background-color: $colorBlue;
+      transition: .5s;
+
     }
   }
 
