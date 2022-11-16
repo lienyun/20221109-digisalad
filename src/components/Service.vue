@@ -15,97 +15,13 @@
         <button class="service-btn">OUR SERVICES</button>
         <div class="services">
             <div class="service-col">
-                <div class="service">
+                <div class="service" v-for="service in services">
 
                     <div class="circle">
-                        <img src="service-01.png" alt="">
+                        <img :src=service.img alt="">
                     </div>
 
-                    <h4>UX Design</h4>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
-                        Duis
-                        tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-                    <button>VIEW MORE</button>
-                </div>
-                <div class="service">
-                    <div class="circle">
-                        <img src="service-02.png" alt="">
-                    </div>
-                    <h4>UI Design</h4>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
-                        Duis
-                        tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-                    <button>VIEW MORE</button>
-                </div>
-                <div class="service">
-                    <div class="circle">
-                        <img src="service-03.png" alt="">
-                    </div>
-                    <h4>website development</h4>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
-                        Duis
-                        tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="service-col">
-                <div class="service">
-                    <div class="circle">
-                        <img src="service-04.png" alt="">
-                    </div>
-                    <h4>UX Design</h4>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
-                        Duis
-                        tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-                    <button>VIEW MORE</button>
-                </div>
-                <div class="service">
-                    <div class="circle">
-                        <img src="service-05.png" alt="">
-                    </div>
-                    <h4>UI Design</h4>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
-                        Duis
-                        tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-                    <button>VIEW MORE</button>
-                </div>
-                <div class="service">
-                    <div class="circle">
-                        <img src="service-06.png" alt="">
-                    </div>
-                    <h4>website development</h4>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
-                        Duis
-                        tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="service-col">
-                <div class="service">
-                    <div class="circle">
-                        <img src="service-07.png" alt="">
-                    </div>
-                    <h4>UX Design</h4>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
-                        Duis
-                        tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-                    <button>VIEW MORE</button>
-                </div>
-                <div class="service">
-                    <div class="circle">
-                        <img src="service-08.png" alt="">
-                    </div>
-                    <h4>UI Design</h4>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
-                        Duis
-                        tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-                    <button>VIEW MORE</button>
-                </div>
-                <div class="service">
-                    <div class="circle">
-                        <img src="service-09.png" alt="">
-                    </div>
-                    <h4>website development</h4>
+                    <h4>{{ service.title }}</h4>
                     <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.
                         Duis
                         tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
@@ -117,6 +33,28 @@
         <a href="#">VIEW MORE DIGISALAD’S INGRADIENTS</a>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'service',
+    data() {
+        return {
+            services: [
+                { id: 1, img: 'service-01.png', title: 'UX Design' },
+                { id: 2, img: 'service-02.png', title: 'UI Design' },
+                { id: 3, img: 'service-03.png', title: 'website development' },
+                { id: 4, img: 'service-04.png', title: 'mobile app development' },
+                { id: 5, img: 'service-05.png', title: 'ecommerce' },
+                { id: 6, img: 'service-06.png', title: 'customer loyalty' },
+                { id: 7, img: 'service-07.png', title: 'digital transformation' },
+                { id: 8, img: 'service-08.png', title: 'digital marketing' },
+                { id: 9, img: 'service-09.png', title: 'BRANDING' }
+            ]
+        }
+    }
+}
+
+</script>
 
 <style lang="scss" scoped>
 $colorBlue: #26C6D0;
@@ -177,12 +115,12 @@ h2 {
 
 .service-col {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .service {
-    padding: 60px 25px;
+    width: 33%;
+    padding: 30px 25px;
 
     & div,
     button {
@@ -323,31 +261,36 @@ a {
     0% {
         width: 0;
     }
+
     100% {
         width: 416px;
     }
 }
 
-a:hover{
+a:hover {
     &::after {
         animation: showHighlight forwards;
         animation-duration: .5s;
     }
 }
-@media(max-width: 960px) {
+@media(max-width: 1200px) {
     .container{
+        padding-top: 420px;
+    }
+}
+@media(max-width: 960px) {
+    .container {
         margin-top: 800px;
+        padding-top: 300px;
         padding-bottom: 400px;
 
+        & h2 {
+            line-height: 68px;
+        }
 
-        & .services{
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-            & .service-col {
-                display: flex;
-                flex-direction: column;
-            }
+
+        & .service {
+            width: 100%;
         }
     }
 }

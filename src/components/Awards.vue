@@ -39,7 +39,6 @@ export default {
 
 .content {
     position: absolute;
-    // left: 10%;
     right: 0;
     width: 80vw;
     margin-top: 125px;
@@ -49,8 +48,8 @@ export default {
     padding: 65px;
 
     .mainText {
-        width: 416px;
-        padding-right: 37px;
+        // width: 416px;
+        // padding-right: 37px;
     }
 
     .awards {
@@ -83,11 +82,20 @@ export default {
     }
 }
 
+@media(max-width: 1200px) {
+    .content {
+        width: 85vw;
+
+    }
+}
+
 @media(max-width: 960px) {
     .content {
         flex-direction: column;
         text-align: center;
         justify-content: center;
+        padding: 65px 30px;
+        width: 90vw;
 
         & .mainText {
             padding: 0;
@@ -100,6 +108,7 @@ export default {
             & :first-of-type {
                 padding-bottom: 0;
             }
+
             & img {
                 padding-top: 20px;
             }

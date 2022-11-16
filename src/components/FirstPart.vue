@@ -4,7 +4,6 @@
         <video autoplay loop muted type="video/mp4" src="DigiSalad Website Videov3_1080p.mp4"></video>
     </div>
     <div class="title">
-
         <div class="text">
             <div class="leftText">
                 <h5>DIGITAL AGENCY</h5>
@@ -44,11 +43,6 @@
 <script>
 export default {
     name: 'FirstPart',
-    mounted() {
-    },
-    methods: {
-
-    },
 }
 </script>
 
@@ -56,8 +50,6 @@ export default {
 * {
     box-sizing: border-box;
     font-family: "proxima-nova";
-
-
 }
 
 .title {
@@ -86,7 +78,6 @@ h1 {
         content: '';
         display: block;
         background-color: #26C6D0;
-        // width: 580px;
         height: 8px;
         position: relative;
         top: -25px;
@@ -95,14 +86,14 @@ h1 {
         margin: 0;
         animation: showHighLight forwards;
         animation-duration: .5s;
-        // animation-delay: 2s;
     }
 }
 
-@keyframes showHighLight{
+@keyframes showHighLight {
     0% {
         width: 0px;
     }
+
     100% {
         width: 580px;
     }
@@ -122,7 +113,6 @@ h1 {
 
 .text {
     display: flex;
-
 }
 
 .leftText {
@@ -201,25 +191,27 @@ h1 {
     display: none;
 }
 
-@media(max-width: 960px) {
+@media(max-width:960px) {
     .mainText {
         display: none;
     }
 
     .mainText-RWD {
         display: block;
-        margin: 0 auto;
+        margin: 0 30px;
         margin-top: 100px;
-        // min-width: 400px;
 
         & h1 {
+            font-size: 30px;
+            line-height: 50px;
+
             &::after {
-                // width: 360px;
-                // height: 8px;
+                top: -20px;
                 animation: showHighLight-rwd forwards;
                 animation-duration: .5s;
             }
         }
+
         & img {
             margin-bottom: 30px;
         }
@@ -229,12 +221,14 @@ h1 {
         display: none;
     }
 }
-@keyframes showHighLight-rwd{
+
+@keyframes showHighLight-rwd {
     0% {
         width: 0px;
     }
+
     100% {
-        width: 360px;
+        width: 300px;
     }
 }
 </style>

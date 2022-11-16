@@ -27,7 +27,7 @@ export default {
         handleScroll() {
             this.isSticky = window.scrollY > 50 ? true : false;
         },
-        menu(){
+        menu() {
             this.$emit('openMenu')
         }
     }
@@ -38,7 +38,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 nav {
     position: absolute;
     z-index: 99;
@@ -50,6 +49,7 @@ nav {
     margin: 0;
     background-color: transparent;
     top: 0;
+    padding: 0 60px 0 80px;
 
     & button {
         padding: 12px 20px;
@@ -64,13 +64,13 @@ nav {
         text-align: center;
         line-height: 17px;
         margin-right: 44px;
+
         &:hover {
             cursor: pointer;
         }
     }
 
     .logo {
-        margin-left: 80px;
         opacity: 0;
 
         &.show {
@@ -81,7 +81,7 @@ nav {
     & .right-side {
         display: flex;
         align-items: center;
-        margin-right: 60px;
+
         & img:hover {
             cursor: pointer;
         }
@@ -105,17 +105,27 @@ nav {
     0% {
         top: -300px;
     }
+
     100% {
         top: 0;
     }
 }
+
 .scroll {
     animation-name: showNav;
     animation-duration: 1s;
 }
-@media(max-width: 540px){
-nav button {
-    display: none;
-}
+
+@media(max-width: 540px) {
+    nav button {
+        display: none;
+    }
+    nav {
+        height: 64px;
+        padding: 10px 30px;
+        & .logo {
+            height: 40px;
+        }
+    }
 }
 </style>

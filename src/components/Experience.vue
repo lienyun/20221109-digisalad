@@ -26,6 +26,7 @@ $colorBlue: #26C6D0;
 $colorPurple: #585880;
 $colorPink: #EE6C8A;
 $colorYellow: #FFBC58;
+
 .container {
     background-color: white;
     padding-top: 435px;
@@ -61,6 +62,7 @@ p {
 
 .content {
     padding: 50px 10%;
+
     & img {
         margin: 0 auto;
         display: block;
@@ -69,18 +71,30 @@ p {
     }
 }
 
-@media(max-width: 768px){
-    .container{
-        padding-top: 800px;
+@media (max-width: 1200px) {
+    .container {
+        padding-top: 735px;
+
     }
+}
+
+@media(max-width: 768px) {
+    .container {
+        padding-top: 800px;
+
+        & h2 {
+            line-height: 68px;
+        }
+    }
+
     .content {
 
-    & img {
-        margin: 0 auto;
-        display: block;
-        margin-top: 40px;
-        width: 90%;
+        & img {
+            margin: 0 auto;
+            display: block;
+            margin-top: 40px;
+            width: 90%;
+        }
     }
-}
 }
 </style>

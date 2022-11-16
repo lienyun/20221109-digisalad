@@ -4,7 +4,7 @@
     <h2 id="about">&nbsp;&nbsp;ABOUT DIGISALAD&nbsp;&nbsp;</h2>
 
     <div class="video-container">
-      <img src="video-thumbnail.png" alt="">
+      <img src="video-thumbnail.png" alt="video">
     </div>
     <div class="text-container">
       <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt
@@ -100,6 +100,17 @@ button {
     height: 2px;
     background-color: white;
     margin-left: 15px;
+
   }
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #26C6D0;
+    &::after {
+      background-color: #26C6D0;
+    }
+  }
+
 }
 </style>

@@ -4,7 +4,7 @@
 
         <div class="content">
             <div class="boss">
-                <img src="tony.png" alt="">
+                <img src="tony.png" alt="tony ng">
                 <h4>Tony Ng</h4>
                 <p>Founder & Creative Director</p>
             </div>
@@ -121,6 +121,7 @@
             padding-top: 80px;
             & p{
                 font-size: 16px;
+                line-height: 36px;
             }
         }
     }

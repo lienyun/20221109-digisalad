@@ -97,16 +97,12 @@ export default {
     },
     aboutHandler() {
       this.cancel()
-      setTimeout(() => {
-        window.location = '#about'
-      }, 0);
+      window.location = '#about'
+
     },
     serviceHandler() {
-      console.log('service')
       this.cancel()
-      setTimeout(() => {
-        window.location = '#service'
-      }, 0);
+      window.location = '#service'
     }
   }
 
@@ -136,12 +132,16 @@ export default {
 .nav {
   position: relative;
   z-index: 5;
-  padding: 41px 60px 0 60px;
+  height: 100px;
+  padding: 0 60px 0 80px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   & img {
-    width: 140px;
+    // height: 40px;
+    width: 120px;
+    height: 54px;
   }
 
   & .cancel-matte {
@@ -176,10 +176,6 @@ export default {
       transform: rotate(90deg);
     }
 
-
-    // &:hover {
-    //   cursor: pointer;
-    // }
   }
 }
 
@@ -459,26 +455,35 @@ export default {
   display: none;
 }
 
-.btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover,.btn5:hover,.btn6:hover {
+.btn1:hover,
+.btn2:hover,
+.btn3:hover,
+.btn4:hover,
+.btn5:hover,
+.btn6:hover {
   animation: shakeBtn infinite linear;
-  animation-duration: .5s ;
+  animation-duration: .5s;
 }
 
 @keyframes shakeBtn {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(-5deg);
 
   }
+
   50% {
     transform: rotate(0deg);
 
   }
+
   75% {
     transform: rotate(5deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -486,6 +491,18 @@ export default {
 }
 
 @media(max-width: 1200px) {
+
+  .nav {
+    height: 64px;
+    padding: 10px 25px 10px 30px;
+
+    & img {
+      width: 88.8px;
+      height: 40px;
+    }
+
+  }
+
   .container {
     width: 100vw;
     height: 100%;
@@ -498,6 +515,7 @@ export default {
 
   .buttons {
     flex-direction: column;
+    padding: 0;
 
     & .left-btn,
     .center-btn,
