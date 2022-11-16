@@ -73,6 +73,9 @@ $colorPurple: #585880;
 $colorPink: #EE6C8A;
 $colorYellow: #FFBC58;
 
+*{
+    font-family: "proxima-nova";
+}
 .container {
     margin: 0;
     position: relative;
